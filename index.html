@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genius Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-8">
+    
+    <header></header>
+    <main>
+        <div class="flex gap-5">
+            <!-- Shape Container -->
+            <div class="flex-1 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Triangle -->
+                <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                    <figure><img src="./images/triangle.png" alt="rectangle" /></figure>
+                    <div class="card-body text-center">
+                      <h2 class="card-title mx-auto ">Triangle</h2>
+                      <p class="text-xl">Area (a) = 0.5 x b x h</p>
+
+                      <div>
+                        <input id="base-input-field" class="w-24 p-2 bg-gray-300" type="text" placeholder="b">
+                        <span class="mr-3 ml-3">cm</span>
+                        <input id="height-input-field" class="w-24 p-2 bg-gray-300" type="text" placeholder="h">
+                        <span class="mr-3">cm</span>
+                      </div>
+                      <div>
+                        <p class="text-lg">Area: <span id="area-input"></span>cm<sup>2</sub></p>
+                      </div>
+                      <div class="card-actions ">
+                        <button onclick="calcluteButton()" class="btn btn-primary w-full bg-opacity-80">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Rectangle -->
+                  <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                    <figure><img src="./images/rectangle.png" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                      <h2 class="card-title mx-auto">Rectangle</h2>
+                      <p>Area (A) = w x I </p>
+
+                      <div>
+                        <input id="width-input-field" class="w-24 p-2 bg-gray-300" type="text" placeholder="W">
+                        <span class="mr-3 ml-3">cm</span>
+                        <input id="length-input-field" class="w-24 p-2 bg-gray-300" type="text" placeholder="I">
+                        <span class="mr-3">cm</span>
+                      </div>
+
+                      <p>Area: <span id="rectangle-area">0</span>cm<sup>2</sup></p>
+
+                      <div class="card-actions w-full">
+                        <button onclick="rectangleButton()" class="btn btn-primary w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--Parallelogram  -->
+                  <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                    <figure><img src="./images/parallelogram.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Parallelogram</h2>
+                      
+                      <div class="card-actions ">
+                        <button class="btn btn-primary w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Rhombus -->
+                  <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                    <figure><img src="./images/rhombus.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Rhombus</h2>
+                      
+                      <div class="card-actions ">
+                        <button class="btn btn-primary w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <!-- Pentagon -->
+                  <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                    <figure><img src="./images/pentagon.png" alt="pentagon" /></figure>
+                    <div class="card-body text-center ">
+                      <h2 class="card-title mx-auto">Pentagon</h2>
+                      <p class="text-2xl font-medium">Area (A) = 0.5 x p x b</p>
+
+                      <div>
+                        <input id="pentagonep" class="w-24 p-2 bg-gray-300" type="text" placeholder="p">
+                        <span class="mr-3 ml-3">cm</span>
+                        <input id="pentagonebase" class="w-24 p-2 bg-gray-300" type="text" placeholder="b">
+                        <span class="ml-3">cm</span>
+                      </div>
+                      <p>Area: <span id="pentaare">0</span>cm<sup>2</sup></p>
+                      <div class="card-actions ">
+                        <button onclick="pentagonCalculate()" class="btn btn-primary w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Ellipse -->
+                  <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                    <figure><img src="./images/ellipse.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Ellipse</h2>
+                      
+                      <div class="card-actions">
+                        <button class="btn btn-primary w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+
+            <!-- Area Calculation -->
+            <div class="w-[447px] border-4 border-gray-500 rounded-md">
+                <h1 class='text-xl font-semibold text-center'>Area Calculation</h1>
+                <hr>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="pentagon.js"></script>
+    <script src="style.css/js/first.js"></script>
+</body>
+</html>
